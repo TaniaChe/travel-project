@@ -5,6 +5,15 @@
 /* Here you can @import url('http...') fonts if you want to have your custom font */
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@200&family=Nunito+Sans:opsz@6..12&family=Poppins:wght@400;500&family=Roboto:wght@400;700&family=Rubik:wght@300&family=Work+Sans:wght@100&display=swap");
 
+:root {
+  --primary-dark: #bd81bf;
+  --primary-light: #d4b8e9;
+}
+
+.icon {
+	color: var(--primary-dark)
+}
+
 @layer base {
   body {
     @apply font-[Poppins];
@@ -24,5 +33,13 @@
 
   h3 {
     @apply text-xl font-bold;
+  }
+
+  button {
+    @apply p-3 border bg-gradient-to-r from-[var(--primary-dark)] to-[var(--primary-light)] text-white rounded-md;
+  }
+
+  .icon {
+	@apply text-2xl cursor-pointer
   }
 }
